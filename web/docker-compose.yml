@@ -3,6 +3,7 @@ networks:
   dokploy-network:
     external: true
 
+
 services:
   # --- Tu Web App de Next.js ---
   web-app:
