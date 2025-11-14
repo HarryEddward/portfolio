@@ -1,0 +1,11 @@
+---
+title: "Building Boilerplate-Free CLIs for Fastify and Fresh"
+date: '2025-11-11'
+summary: "Fed up with the repetitive setup when spinning up new Fastify and Fresh projects? Were building a custom antiboilerplate CLI to automate scaffolding, so you can jump straight to building features."
+---
+
+Starting a new project with a modern stack like Fastify for the backend and Fresh for the frontend promises speed, but it often begins with a slow, manual crawl through "boilerplate." Every single time, we find ourselves wiring up the same plugins in Fastify, defining standard routes, configuring CORS, and then repeating the process in Fresh by creating island components and API routes. This copy-paste ritual isn't just tedious; it's a significant drain on initial momentum and a prime opportunity for introducing configuration errors before a single line of business logic is written.
+
+This is where the "antiboilerplate" philosophy, implemented as a custom CLI, becomes a game-changer. Instead of cloning a massive starter repository filled with code we don't need, our CLI tool acts as an interactive architect. It will be designed to ask questions: "Are you building a full-stack app or just an API?", "Need database integration?", "Add standard auth routes?". Based on the answers, it will programmatically generate the *minimal* necessary files, connecting Fastify and Fresh with best practices from the start, effectively building the scaffolding *for* us.
+
+We'll dive into the mechanics of building this tool, likely using a library like `cleye` or `commander` to create a professional CLI experience. The core of the tool will leverage template files and the Node.js `fs` module to write the directory structure, install dependencies, and even set up the concurrent `dev` scripts needed to run both frameworks simultaneously. The ultimate goal is to replace hours of setup with a single command, allowing any developer on the team to spin up a new, production-ready project in seconds.

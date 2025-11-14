@@ -1,0 +1,27 @@
+{
+  "HomePage": {
+    "title": "Adrià Martín Martorell",
+    "subtitle": "Fundador Técnico y Arquitecto Developer",
+    "description": "Emprendedor y programador multidisciplinado enfocado en resolver problemas de infraestructura y entornos de gestión complejos.",
+    "highlight": "Trabajando mas de +5 años de experiencia."
+  },
+  "Contacts": {
+    "personalPhone": "+34 643 56 70 16 (Personal)",
+    "businessPhone": "+34 614 06 91 67 (Empresarial)",
+    "email": "admin@cafebuy.es"
+  },
+  "Hobbies": {
+    "1rParagraph": "Comencé a mis 11 años a entender la programación basado en copiar videojuegos en Godot, luego a los 13 años me dedique enserio a estudiar programación informatica no como hobbie sino como profesion, dedicandome tiempo en el recreo cuando estuve en el instituto.",
+    "2rParagraph": "A los 16 años, comence a tocar React y sus librerias aprendiendo CSR en web, juntamente con la aprendizaje de hacer un programa empresarial, como uso de API&apos;s, colas de mensajería, DevOps, app&apos;s móviles multiplataforma y más.",
+    "3rParagraph": "Y a partir de mis 18 años con la experiencia de haber trabajado en creación de librerías y en el proyecto gigantesco del software empresarial para peluquerías. He decidido a ",
+    "3rParagraphHighlighted": "emprender mi propio proyecto, creando la suite empresarial hostelera."
+  },
+  "Navigation": {
+    "presentation": "Presentación",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "hobbies": "Aficiones"
+  }
+}

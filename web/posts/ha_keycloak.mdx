@@ -1,0 +1,11 @@
+---
+title: 'How to Scale Keycloak Horizontally for High Availability'
+date: '2025-11-10'
+summary: 'A deep dive into configuring a multi-node Keycloak cluster for high availability, fault tolerance, and handling enterprise-level traffic loads.'
+---
+
+When deploying Keycloak in a production environment, relying on a single instance quickly becomes a bottleneck. This standalone setup not only presents a single point of failure (SPOF) but also struggles to handle high-traffic loads during peak authentication periods. To build a robust, resilient, and high-performance identity system, we must move beyond a single server. This is where horizontal scaling comes into play, transforming our Keycloak deployment into a distributed cluster capable of managing enterprise-level demands without breaking a sweat.
+
+The transition to a clustered Keycloak setup involves several critical components working in concert. At the heart of the architecture is a shared, external database, ensuring that all Keycloak nodes access the same user and realm data. In front of the nodes, a load balancer is required to distribute incoming authentication requests evenly, while also managing sticky sessions to maintain user context. Furthermore, we'll dive deep into configuring the embedded Infinispan cache for distributed operation, allowing sessions, user data, and realm keys to be shared across the cluster in real-time, which is the true secret behind seamless scaling.
+
+Achieving true horizontal scaling with Keycloak isn't just about spinning up more containers; it's about configuring them for proper discovery and cache coherence. We will tackle common challenges, such as setting up the correct stack for network discovery (whether on Kubernetes or traditional VMs) and optimizing Infinispan replication to avoid excessive network chatter. By the end of this guide, you will have a clear blueprint for a fault-tolerant system where the failure of one node is completely transparent to the end-user, ensuring high availability and the capacity to handle authentication for millions of users.
