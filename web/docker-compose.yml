@@ -9,6 +9,10 @@ services:
     # 1. CONSTRUYE LA IMAGEN
     # Le dice a Swarm que construya la imagen desde el Dockerfile
     # en el directorio actual ('.')
+    build:
+      context: .
+      target: builder
+      dockerfile: Dockerfile
     
     # El nombre de la imagen que se creará localmente
     image: cafebuy-web-app:latest
@@ -21,5 +25,4 @@ services:
       # El Dockerfile expone el puerto 3000, pero aquí lo confirmamos.
       - PORT=3000
       # Carga los secretos de Swarm como variables de entorno
-      - NEXT_PUBLIC_API_URL_FILE=${}
       - DATABASE_POSTGRESQL=${DATABASE_POSTGRESQL}
