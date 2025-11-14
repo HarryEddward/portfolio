@@ -9,10 +9,6 @@ services:
     # 1. CONSTRUYE LA IMAGEN
     # Le dice a Swarm que construya la imagen desde el Dockerfile
     # en el directorio actual ('.')
-    build:
-      context: .
-      target: builder
-      dockerfile: Dockerfile
     
     # El nombre de la imagen que se creará localmente
     image: cafebuy-web-app:latest
