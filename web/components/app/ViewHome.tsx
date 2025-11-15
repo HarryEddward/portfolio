@@ -8,31 +8,10 @@ import { useTranslations } from "next-intl";
 import CopyText from "@/components/app/CopyText";
 import { LanguageSwitcher } from "@/components/app/LanguageSwitcher";
 import Link from 'next/link';
-import { buttonsIconsHeader, elementsNavbar } from '@/config/frontend/index';
-import { FaDocker, FaJenkins, FaPython, FaReact } from 'react-icons/fa';
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiAnsible, SiFastapi, SiDeno, SiPreact, SiMermaid, SiVagrant, SiGithub, SiJira } from 'react-icons/si';
-import { FaNodeJs } from 'react-icons/fa';
-import { FaGolang } from "react-icons/fa6";
-import { PiShippingContainerFill } from "react-icons/pi";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { SiRedis, SiFresh, SiRabbitmq, SiCanva } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
-import { IoLogoCapacitor } from "react-icons/io5";
+import { buttonsIconsHeader, categoriesSkills, elementsNavbar, hobbiesSection } from '@/config/frontend/index';
 import type { Post } from "@/lib/posts";
 
 
-// Define types for our technology items
-interface TechItem {
-  Icon: React.ComponentType<{ className?: string }>;
-  name: string;
-}
-
-// Define the category structure
-interface Category {
-  id: string;
-  title: string;
-  techs: TechItem[];
-}
 
 interface IViewHome {
   posts: Post[];
@@ -72,64 +51,6 @@ export default function ViewHome({ posts }: IViewHome) {
     return () => observer.disconnect();
   }, []);
 
-  // Define categories with their technologies
-  const categories: Category[] = [
-    {
-      id: "frontend",
-      title: "Frontend",
-      techs: [
-        { Icon: FaReact, name: 'React' },
-        { Icon: SiTypescript, name: 'TypeScript' },
-        { Icon: SiTailwindcss, name: 'Tailwind' },
-        { Icon: SiPreact, name: 'Preact' },
-        { Icon: TbBrandReactNative, name: 'Expo' },
-        { Icon: SiMermaid, name: 'MermaidJS' },
-        { Icon: IoLogoCapacitor, name: 'CapacitorJS' },
-        { Icon: SiCanva, name: 'Canva' },
-      ]
-    },
-    {
-      id: "backend",
-      title: "Backend",
-      techs: [
-        { Icon: FaNodeJs, name: 'Node.js' },
-        { Icon: FaPython, name: 'Python' },
-        { Icon: SiFastapi, name: 'FastAPI' },
-        { Icon: SiDeno, name: 'Deno' },
-        { Icon: FaGolang, name: 'Golang' },
-        { Icon: SiFresh, name: 'Fresh' },
-        { Icon: SiNextdotjs, name: 'Next.js' },
-      ]
-    },
-    {
-      id: "databases",
-      title: "Databases",
-      techs: [
-        { Icon: SiMongodb, name: 'MongoDB' },
-        { Icon: BiLogoPostgresql, name: 'PostgreSQL' },
-        { Icon: SiRedis, name: 'Redis' },
-      ]
-    },
-    {
-      id: "devops",
-      title: "DevOps & Tools",
-      techs: [
-        { Icon: FaDocker, name: 'Docker' },
-        { Icon: FaJenkins, name: 'Jenkins' },
-        { Icon: SiAnsible, name: 'Ansible' },
-        { Icon: PiShippingContainerFill, name: 'Docker Swarm' },
-        { Icon: SiRabbitmq, name: 'RabbitMQ' },
-        { Icon: SiVagrant, name: 'Vagrant' },
-        { Icon: SiGithub, name: 'GitHub' },
-        { Icon: SiJira, name: 'Jira' },
-      ]
-    }
-  ];
-
-  const hobbiesSection = [
-    { name: "Lectura", description: "Me apasiona leer sobre tecnología, desarrollo personal. Siempre hay algo nuevo que aprender de cada libro." },
-    { name: "Calistenia", description: "Mantengo un equilibrio entre el trabajo mental y físico. El ejercicio me ayuda a mantener la claridad mental y la creatividad." },
-  ]
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
@@ -298,7 +219,7 @@ export default function ViewHome({ posts }: IViewHome) {
           </h2>
           
           {/* Render each category */}
-          {categories.map((category, categoryIndex) => (
+          {categoriesSkills.map((category, categoryIndex) => (
             <div key={category.id} className="mb-12">
               <h3 className="text-2xl font-semibold mb-6 text-black dark:text-white border-b border-gray-200 dark:border-gray-800 pb-2">
                 {category.title}
