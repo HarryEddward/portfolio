@@ -10,14 +10,16 @@ import { LanguageSwitcher } from "@/components/app/LanguageSwitcher";
 import Link from 'next/link';
 import { buttonsIconsHeader, categoriesSkills, elementsNavbar, hobbiesSection } from '@/config/frontend/index';
 import type { Post } from "@/lib/posts";
+import { Project } from "@/lib/projects";
 
 
 
 interface IViewHome {
   posts: Post[];
+  projects: Project[];
 }
 
-export default function ViewHome({ posts }: IViewHome) {
+export default function ViewHome({ posts, projects }: IViewHome) {
   const t = useTranslations('HomePage');
   const tContacts = useTranslations('Contacts');
   const tHobbies = useTranslations('Hobbies');
@@ -264,59 +266,34 @@ export default function ViewHome({ posts }: IViewHome) {
           
           {/* Grid de proyectos */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Ejemplo de tarjeta de proyecto */}
-            <div className="border-2 border-gray-200 dark:border-gray-800 p-6 hover:border-black dark:hover:border-white transition-colors">
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Software empresarial de automatización de peluquerias
-              </h3>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-                Descripción breve del proyecto y tecnologías utilizadas.
-              </p>
-              <div className="flex gap-2">
-                <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                  Demo
-                </a>
-                <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                  Código
-                </a>
-              </div>
-            </div>
 
-            {/* Puedes duplicar esta tarjeta para más proyectos */}
-            <div className="border-2 border-gray-200 dark:border-gray-800 p-6 hover:border-black dark:hover:border-white transition-colors">
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Suite empresarial de gestion hostelera
-              </h3>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-                Descripción de otro proyecto interesante.
-              </p>
-              <div className="flex gap-2">
-                <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                  Demo
-                </a>
-                <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                  Código
-                </a>
-              </div>
-            </div>
+            {
+              projects.map((project, index) => (
+                <div key={index} className="border-2 border-gray-200 dark:border-gray-800 p-6 hover:border-black dark:hover:border-white transition-colors">
+                  <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+                    Descripción breve del proyecto y tecnologías utilizadas.
+                  </p>
+                  <div className="flex gap-2">
+                    <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+                      Demo
+                    </a>
+                    <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+                      Código
+                    </a>
+                  </div>
+                </div>
+              ))
+            }
+            <p className="py-6 border-gray-100 text-xl font-medium hover:underline text-black dark:text-white">
+              ...
+            </p>
+            <Link href={`/projects`} className=" border-2 py-6 pl-6 border-gray-100 text-sm font-medium hover:underline text-black dark:text-white">
+              Visitar proyectos →
+            </Link>
 
-            {/* Ejemplo de tarjeta de proyecto */}
-            <div className="border-2 border-gray-200 dark:border-gray-800 p-6 hover:border-black dark:hover:border-white transition-colors">
-              <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">
-                Librería sobre automatización en fuentes de textos para React.
-              </h3>
-              <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-                Descripción breve del proyecto y tecnologías utilizadas.
-              </p>
-              <div className="flex gap-2">
-                <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                  Demo
-                </a>
-                <a href="#" className="text-sm border border-black dark:border-white px-3 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                  Código
-                </a>
-              </div>
-            </div>
           </div>
         </motion.section>
 

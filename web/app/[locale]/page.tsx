@@ -1,9 +1,11 @@
 import ViewHome from '@/components/app/ViewHome';
 import { getAllPosts } from '@/lib/posts';
+import { getAllProjects } from '@/lib/projects';
 import { getTranslations } from 'next-intl/server';
 
 export default async function Home() {
   const posts = getAllPosts().slice(0, 2); // Obtener solo los 3 posts más recientes
+  const projects = getAllProjects().slice(0, 4); // Obtener solo los 3 proyectos más recientes
 
   const tResponsiveWeb = await getTranslations('ResponsiveWeb');
 
@@ -18,7 +20,7 @@ export default async function Home() {
 
       {/* 💻 Vista desktop */}
       <div className="hidden lg:block">
-        <ViewHome posts={posts} />
+        <ViewHome posts={posts} projects={projects}/>
       </div>
     </>
   )

@@ -2,7 +2,7 @@ import { BsGithub } from 'react-icons/bs';
 import { CgNpm } from 'react-icons/cg';
 
 import { FaDocker, FaJenkins, FaPython, FaReact } from 'react-icons/fa';
-import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiAnsible, SiFastapi, SiDeno, SiPreact, SiMermaid, SiVagrant, SiGithub, SiJira } from 'react-icons/si';
+import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiAnsible, SiFastapi, SiDeno, SiPreact, SiMermaid, SiVagrant, SiGithub, SiJira, SiAmazonrds } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 import { FaGolang } from "react-icons/fa6";
 import { PiShippingContainerFill } from "react-icons/pi";
@@ -107,6 +107,8 @@ export const categoriesSkills: Category[] = [
       { Icon: SiMongodb, name: 'MongoDB' },
       { Icon: BiLogoPostgresql, name: 'PostgreSQL' },
       { Icon: SiRedis, name: 'Redis' },
+      { Icon: SiAmazonrds, name: 'Autobase'}
+
     ]
   },
   {
