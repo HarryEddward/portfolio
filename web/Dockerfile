@@ -41,5 +41,9 @@ USER nextjs
 
 EXPOSE 3000
 
+# ----- AÑADE ESTAS DOS LÍNEAS -----
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
 # El comando para arrancar el servidor standalone
 CMD ["node", "server.js"]
