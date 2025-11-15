@@ -170,7 +170,7 @@ export default function ViewHome({ posts }: IViewHome) {
               }}
             >
               <Image
-                src="/me.png"
+                src="/cv/me.png"
                 alt="Illustration"
                 width={320}
                 height={240}
