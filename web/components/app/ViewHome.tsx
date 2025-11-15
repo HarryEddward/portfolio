@@ -9,7 +9,6 @@ import CopyText from "@/components/app/CopyText";
 import { LanguageSwitcher } from "@/components/app/LanguageSwitcher";
 import Link from 'next/link';
 import { buttonsIconsHeader, elementsNavbar } from '@/config/frontend/index';
-import { Post } from "@/lib/mdx";
 import { FaDocker, FaJenkins, FaPython, FaReact } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiMongodb, SiAnsible, SiFastapi, SiDeno, SiPreact, SiMermaid, SiVagrant, SiGithub, SiJira } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
@@ -19,6 +18,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SiRedis, SiFresh, SiRabbitmq, SiCanva } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { IoLogoCapacitor } from "react-icons/io5";
+import type { Post } from "@/lib/posts";
 
 // Define types for our technology items
 interface TechItem {
