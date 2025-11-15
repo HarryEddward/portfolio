@@ -42,4 +42,4 @@ USER nextjs
 EXPOSE 3000
 
 # El comando para arrancar el servidor standalone
-CMD ["node", "server.js"]
+CMD ["pnpm", "run", "start"]
