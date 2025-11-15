@@ -1,5 +1,3 @@
-"use server";
-
 import ViewHome from '@/components/app/ViewHome';
 import { getAllPosts } from '@/lib/posts';
 import { getTranslations } from 'next-intl/server';
