@@ -5,6 +5,11 @@ const nextConfig: NextConfig = {
   /* config options here */
   output: 'standalone',
   basePath: '/cv',
+  assetPrefix: '/cv',
+  images: {
+    unoptimized: true,
+  }
+
   
 };
 
