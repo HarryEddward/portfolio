@@ -4,7 +4,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'standalone',
-
+  basePath: '/cv',
+  
 };
 
 const withNextIntl = createNextIntlPlugin();
