@@ -21,6 +21,7 @@ import { IoLogoCapacitor } from "react-icons/io5";
 import type { Post } from "@/lib/posts";
 import { imageLoader } from '@/components/global/useImageLoader';
 
+
 // Define types for our technology items
 interface TechItem {
   Icon: React.ComponentType<{ className?: string }>;
