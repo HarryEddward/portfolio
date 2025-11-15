@@ -169,7 +169,7 @@ export default function ViewHome({ posts }: IViewHome) {
               }}
             >
               <Image
-                src="/me.png"
+                src="www.cafebuy.es/me.png"
                 alt="Illustration"
                 width={320}
                 height={240}
