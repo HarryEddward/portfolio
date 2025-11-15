@@ -173,6 +173,7 @@ export default function ViewHome({ posts }: IViewHome) {
                 alt="Illustration"
                 width={320}
                 height={240}
+                loader={imageLoader}
                 priority
               />
             </motion.div>
