@@ -5,6 +5,9 @@
     "description": "Emprendedor y programador multidisciplinado enfocado en resolver problemas de infraestructura y entornos de gestión complejos.",
     "highlight": "Trabajando mas de +5 años de experiencia."
   },
+  "ResponsiveWeb": {
+    "errorResponsiveSizeMessage": "Es un portafolio web serio, no se puede acceder por móvil o tablet. Porfavor utiliza un ordenador para verlo."
+  },
   "Contacts": {
     "personalPhone": "+34 643 56 70 16 (Personal)",
     "businessPhone": "+34 614 06 91 67 (Empresarial)",

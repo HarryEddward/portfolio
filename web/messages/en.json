@@ -5,6 +5,9 @@
     "description": "Entrepreneur and multidisciplinary programmer focused on solving infrastructure problems and complex management environments",
     "highlight": "Working for more than +5 years."
   },
+  "ResponsiveWeb": {
+    "errorResponsiveSizeMessage": "This is a serious web portfolio, it cannot be accessed by mobile or tablet. Please use a computer to view it."
+  },
   "Contacts": {
     "personalPhone": "+34 643 56 70 16 (Personal)",
     "businessPhone": "+34 614 06 91 67 (Business)",
