@@ -1,5 +1,6 @@
 import { LanguageSwitcher } from '@/components/app/LanguageSwitcher';
 import { getAllPosts } from '@/lib/posts';
+import Link from 'next/link';
 
 export default function BlogPage() {
   const posts = getAllPosts();
@@ -20,7 +21,7 @@ export default function BlogPage() {
         <ul className="space-y-4 w-full">
           {posts.map((post) => (
             <li key={post.slug}>
-              <a
+              <Link
                 href={`/blog/${post.slug}`}
                 className="block p-4 border rounded hover:bg-gray-50"
               >
@@ -32,7 +33,7 @@ export default function BlogPage() {
                 {post.description && (
                   <p className="mt-1 text-gray-800">{post.description}</p>
                 )}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
