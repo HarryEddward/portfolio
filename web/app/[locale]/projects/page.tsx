@@ -22,7 +22,7 @@ export default function BlogPage() {
           {posts.map((post) => (
             <li key={post.slug}>
               <Link
-                href={`/blog/${post.slug}`}
+                href={`/projects/${post.slug}`}
                 className="block p-4 border rounded hover:bg-gray-50"
               >
                 <h2 className="text-xl font-semibold">{post.title}</h2>

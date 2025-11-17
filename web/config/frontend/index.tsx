@@ -46,7 +46,7 @@ export const elementsNavbar = [
   {
     key: "about",
     href: "#about",
-    link: "/about"
+    link: "/"
   },
   {
     key: "skills",
