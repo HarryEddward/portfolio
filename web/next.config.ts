@@ -8,7 +8,12 @@ const nextConfig: NextConfig = {
   assetPrefix: '/cv',
   images: {
     unoptimized: true,
-  }
+  },
+  experimental: {
+    // …
+    serverComponentsExternalPackages: ['@react-pdf/renderer'],
+  },
+
 
   
 };

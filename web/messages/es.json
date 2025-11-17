@@ -19,12 +19,16 @@
     "3rParagraph": "Y a partir de mis 18 años con la experiencia de haber trabajado en creación de librerías y en el proyecto gigantesco del software empresarial para peluquerías. He decidido a ",
     "3rParagraphHighlighted": "emprender mi propio proyecto, creando la suite empresarial hostelera."
   },
+  "CertificatedCourses": {
+    "1rParagraph": "Cursos con código de verificación hechos desde Codigo Facilito y Udemy. No tengo muchos cursos el hecho de dedicarme completamente practicado en proyectos empresariales en infraestructura IaaS autohospedadas para tomarme enserio mis habilidades."
+  },
   "Navigation": {
     "presentation": "Presentación",
     "about": "Sobre mí",
     "skills": "Habilidades",
     "projects": "Proyectos",
     "blog": "Blog",
-    "hobbies": "Aficiones"
+    "hobbies": "Aficiones",
+    "certificated_courses": "Cursos Certificados"
   }
 }

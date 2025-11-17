@@ -68,6 +68,11 @@ export const elementsNavbar = [
     href: "#hobbies",
     link: "/"
   },
+  {
+    key: "certificated_courses",
+    href: "#certificated_courses",
+    link: "/"
+  },
 ];
 
 
@@ -130,4 +135,26 @@ export const categoriesSkills: Category[] = [
 export const hobbiesSection = [
   { name: "Lectura", description: "Me apasiona leer sobre tecnología, desarrollo personal. Siempre hay algo nuevo que aprender de cada libro." },
   { name: "Calistenia", description: "Mantengo un equilibrio entre el trabajo mental y físico. El ejercicio me ayuda a mantener la claridad mental y la creatividad." },
-]
+];
+
+export const certifiedImageCoursesCodigoFacilito: string[] = [
+  "/cv/courses/certificado-curso-de-docker-swarm.png",
+  "/cv/courses/certificado-curso-de-herramientas-y-conceptos-frontend.png",
+  "/cv/courses/certificado-curso-de-introduccion-a-rust.png",
+  "/cv/courses/certificado-curso-de-introducción-a-vagrant.png",
+  "/cv/courses/certificado-curso-profesional-de-docker.png",
+  "/cv/courses/certificado-curso-profesional-de-go.png",
+  "/cv/courses/certificado-curso-profesional-de-javascript.png",
+  "/cv/courses/certificado-curso-profesional-de-PHP-8.png",
+  "/cv/courses/certificado-curso-profesional-de-python.png",
+  "/cv/courses/certificado-fundamentos-de-docker-bootcamp-de-devops.png",
+  "/cv/courses/certificado-primera-pagina-2019.png",
+  "/cv/courses/certificado-python-profesional.png",
+  "/cv/courses/certificado-python-servicios-web.png",
+  "/cv/courses/certificado-react-native-2021.png",
+];
+
+
+export const certifiedImageCoursesUdemy: string[] = [
+  "/cv/courses/certificado-software-design-patterns.png",
+];

@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import CopyText from "@/components/app/CopyText";
 import { LanguageSwitcher } from "@/components/app/LanguageSwitcher";
 import Link from 'next/link';
-import { buttonsIconsHeader, categoriesSkills, elementsNavbar, hobbiesSection } from '@/config/frontend/index';
+import { buttonsIconsHeader, categoriesSkills, certifiedImageCoursesCodigoFacilito, certifiedImageCoursesUdemy, elementsNavbar, hobbiesSection } from '@/config/frontend/index';
 import type { Post } from "@/lib/posts";
 import { Project } from "@/lib/projects";
 
@@ -23,6 +23,7 @@ export default function ViewHome({ posts, projects }: IViewHome) {
   const t = useTranslations('HomePage');
   const tContacts = useTranslations('Contacts');
   const tHobbies = useTranslations('Hobbies');
+  const tCertificatedCourses = useTranslations('CertificatedCourses');
   const nav = useTranslations('Navigation');
 
   const [activeSection, setActiveSection] = useState<string>("");
@@ -247,6 +248,8 @@ export default function ViewHome({ posts, projects }: IViewHome) {
               </div>
             </div>
           ))}
+
+          
         </motion.section>
 
         {/* 💼 SECCIÓN: Proyectos */}
@@ -390,6 +393,73 @@ export default function ViewHome({ posts, projects }: IViewHome) {
               Estos hobbies no solo me entretienen, sino que <HighlightedText delay={0.3}>constantemente inspiran mi trabajo y forma de pensar como desarrollador</HighlightedText>.
             </p>
           </div>
+        </motion.section>
+
+        {/* 📝 SECCIÓN: Mis cursos certificados */}
+        <motion.section
+          id="certificated_courses"
+          ref={(el) => { sectionsRef.current.certificated_courses = el; }}
+          className="min-h-screen overflow-scroll w-full snap-start snap-always flex flex-col px-16 pt-24 pb-16"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          {/* Título de la sección */}
+          <h2 className="text-4xl font-bold border-b-2 pb-4 mb-8 text-black dark:text-white">
+            {nav('certificated_courses')}
+          </h2>
+
+          <h4 className="text-lg border-b-2 border-teal-200 text-teal-500 w-1/2 py-2">Codigo Facilito</h4>
+          <div
+            className="w-full"
+          >
+            <div className="w-full flex flex-row gap-x-4 overflow-scroll my-6">
+              {
+                certifiedImageCoursesCodigoFacilito.map((basePath, i) => (
+                  
+                    <Image
+                    src={basePath}
+                    alt=""
+                    className="border-2 border-teal-500"
+                    key={i}
+                    width={320 * 1.2}
+                    height={240 * 1.2}
+                    />
+                  
+                ))
+              }
+            </div>
+            {/* Sección adicional con texto destacado */}
+            <div className="mt-12 border-t-2 border-gray-200 dark:border-gray-800 pt-8">
+              <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3">
+                {tCertificatedCourses('1rParagraph')}
+              </p>
+            </div>
+
+            <h4 className="text-lg border-b-2 border-purple-300 text-purple-500 w-1/2 py-2">Udemy</h4>
+
+            <div className="w-full flex flex-row gap-x-4 overflow-scroll my-6">
+              {
+                certifiedImageCoursesUdemy.map((basePath, i) => (
+                  
+                    <Image
+                    src={basePath}
+                    alt=""
+                    className="border-2 border-purple-500"
+                    key={i}
+                    width={320 * 1.2}
+                    height={240 * 1.2}
+                    />
+                  
+                ))
+              }
+            </div>
+          
+          </div>
+          
+
+          
         </motion.section>
 
       </main>

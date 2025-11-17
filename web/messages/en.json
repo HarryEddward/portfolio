@@ -19,12 +19,16 @@
     "3rParagraph": "And starting at 18, with the experience of having worked on library creation and a massive enterprise software project for hair salons, I decided to ",
     "3rParagraphHighlighted": "start my own venture, creating a business suite for the hospitality industry."
   },
+  "CertificatedCourses": {
+    "1rParagraph": "Courses with verification codes created through Codigo Facilito and Udemy. I don't have many courses because I've dedicated myself entirely to practical experience in self-hosted IaaS infrastructure business projects, which has allowed me to take my skills seriously."
+  },
   "Navigation": {
     "presentation": "Presentation",
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
     "blog": "Blog",
-    "hobbies": "Hobbies"
+    "hobbies": "Hobbies",
+    "certificated_courses": "Certificated Courses"
   }
 }
